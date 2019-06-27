@@ -3,9 +3,9 @@ LUT optimized software DXT1 (BC1), DXT3 (BC2), DXT5 (BC3) texture block decompre
 
 readme.txt from c++ accompaning project
 
-==============================================================================
-DYNAMIC LINK LIBRARY : openS3TC Project Overview
-==============================================================================
+
+# DYNAMIC LINK LIBRARY : openS3TC Project Overview
+
 
 Introduction:
 -------------
@@ -76,31 +76,30 @@ cases which is not that small.
 Test conditions: 
 ----------------
 
-  Test CPU  : Intel 3GHz (2 cores)
-  Source    : 1920x1080 DXT1/DXT3/DXT5 (1000 different images)
-  Target    : 1920x1080 BGRA (easily can be changed to other formats)
-  No# Tests : for each algorithm > 2 000 tests on all images.
-              total > 2 000 000 tests.
+  * Test CPU  : Intel 3GHz (2 cores)
+  * Source    : 1920x1080 DXT1/DXT3/DXT5 (1000 different images)
+  * Target    : 1920x1080 BGRA (easily can be changed to other formats)
+  * No# Tests : for each algorithm > 2 000 tests on all images. Total > 2 000 000 tests.
   
 Test results:
 -------------
 
-  All times are in milliseconds, and are approximations for referenced CPU
-  ---------------------------------------------------------------------------
-  module/file       | debug | release | function
-  ---------------------------------------------------------------------------
-  openS3TC_DXT1.cpp |  11.1 |     5.3 | DXT1Decompress() vs2010|vs2017 v100
-  openS3TC_DXT3.cpp |  16.2 |     7.3 | DXT3Decompress() vs2010|vs2017 v100
-  openS3TC_DXT5.cpp |  16.4 |     7.7 | DXT5Decompress() vs2010|vs2017 v100
-  openS3TC_DXT1.cpp |  11.1 |     5.8 | DXT1Decompress() vs2017 v141
-  openS3TC_DXT3.cpp |  16.2 |     8.0 | DXT3Decompress() vs2017 v141
-  openS3TC_DXT5.cpp |  16.4 |     7.9 | DXT5Decompress() vs2017 v141
-  CS::DXT1.cs       |  14.2 |    12.2 | C# DXT1.Decompress() 
-  CS::DXT3.cs       |  18.1 |    16.2 | C# DXT3.Decompress() 
-  CS::DXT5.cs       |  18.1 |    16.6 | C# DXT5.Decompress() 
-  s3tc_bd.cpp       | 100.0 |    28.0 | BlockDecompressImageDXT1()
-  s3tc_bd.cpp       |  95.0 |    20.0 | BlockDecompressImageDXT5()
-  ---------------------------------------------------------------------------
+  - All times are in milliseconds, and are approximations for referenced CPU
+  -
+  - module/file       | debug | release | function
+  -
+  - openS3TC_DXT1.cpp |  11.1 |     5.3 | DXT1Decompress() vs2010|vs2017 v100
+  - openS3TC_DXT3.cpp |  16.2 |     7.3 | DXT3Decompress() vs2010|vs2017 v100
+  - openS3TC_DXT5.cpp |  16.4 |     7.7 | DXT5Decompress() vs2010|vs2017 v100
+  - openS3TC_DXT1.cpp |  11.1 |     5.8 | DXT1Decompress() vs2017 v141
+  - openS3TC_DXT3.cpp |  16.2 |     8.0 | DXT3Decompress() vs2017 v141
+  - openS3TC_DXT5.cpp |  16.4 |     7.9 | DXT5Decompress() vs2017 v141
+  - CS::DXT1.cs       |  14.2 |    12.2 | C# DXT1.Decompress() 
+  - CS::DXT3.cs       |  18.1 |    16.2 | C# DXT3.Decompress() 
+  - CS::DXT5.cs       |  18.1 |    16.6 | C# DXT5.Decompress() 
+  - s3tc_bd.cpp       | 100.0 |    28.0 | BlockDecompressImageDXT1()
+  - s3tc_bd.cpp       |  95.0 |    20.0 | BlockDecompressImageDXT5()
+  -
   for more detailed statistics check module/file comments.
 
   NOTICE: Benjamin Dobell's s3tc_bd.cpp removed from project due cleanup,
